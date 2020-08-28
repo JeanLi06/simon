@@ -1,0 +1,107 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Montserrat, sans-serif;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.hidden {
+    display: none;
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    height: 100vh;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    transform: 			translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    /* width: 100vw; */
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    color: #eee;
+    padding: 0 15em;
+    z-index: 10;
+}
+
+#loose {
+    font-size: 3em;
+}
+
+#start {
+    background-color: green;
+    color: #eee;
+    border: none;
+    padding: 5px 10px;
+}
+
+#message {
+    text-align: center;
+}
+
+.simon-wrapper {
+    /* position: relative; */
+}
+
+.image-game {
+    width: 350px;
+    height: auto;
+}
+
+svg {
+    position: absolute;
+    overflow: hidden;
+}
+
+svg:hover path {
+    stroke: #eee;
+    stroke-width: 3px;
+    cursor: pointer;
+}
+
+path {
+    fill: rgba(0, 0, 0, 0);
+    transition: fill .3s ease-in-out;
+}
+
+#simon_green {
+    left: 14px;
+    top: 9px;
+}
+
+#simon_red {
+    right: 16px;
+    top: 13px;
+}
+
+#simon_blue {
+    right: 16px;
+    bottom: 20px;
+}
+
+#simon_yellow {
+    left: 13px;
+    bottom: 17px;
+}
+
+.simon_plays {
+    fill: #eee;
+    opacity: 0.4;
+}
