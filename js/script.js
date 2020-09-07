@@ -55,10 +55,6 @@ $(document).ready(function() {
       const playerChoosenKey = e.currentTarget.id;
       playerChoices.push(playerChoosenKey);
       playerCurrentIndex++;
-      // console.log('playerChoosenKey', playerChoosenKey);
-      // console.log('playerChoices', playerChoices);
-      // console.log(playerChoosenKey === simonChoices[0]);
-      // showSimonChoices();
       //  On teste le choix du joueur avec les choix de simon
       playSound(playerChoosenKey);
       testPlayerChoices();
@@ -76,9 +72,6 @@ $(document).ready(function() {
     let intervalSimonPlays = setInterval(() => {
       let simonchoice = simonChoices[simonCurrentIndex];
       console.log('Simon : ', simonchoice);
-      // $('#message').text('Simon joue !');
-      // playSound(simonchoice);
-
       simonSounds[simonchoice].play();
       // On éclaircit la couleur de la touche pendant une demi-seconde
       let currentKey = $(`#${simonchoice} path`);
@@ -94,6 +87,7 @@ $(document).ready(function() {
         simonCurrentIndex = 0;
         clearInterval(intervalSimonPlays);
         $('#message').delay(1500).text('À vous !');
+        $('svg path').toggleClass('clear_stroke');
         simonIsPlaying = false;
       }
     }, SIMON_CHOICES_DISPLAY_DELAY);
